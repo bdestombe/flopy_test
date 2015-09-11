@@ -20,7 +20,7 @@ config = {
     'install_requires': ['numpy'],
     'packages': ['scriptgenerator'],
     'scripts': [],
-    'name': 'scriptgenerator'
+    'name': 'flopy_test_scripts'
 }
 
 setup(**config)
