@@ -15,4 +15,4 @@ ws = 'C:\Users\Bas\Google Drive\CiTG MSc\CIE5060 - Thesis\scripts\\'
 filename = 'test.py'
 nampath = 'C:\\Users\\Bas\\Google Drive\\CiTG MSc\\Artesia\\mflab\\run\\swt_v4.NAM'
 
-init.flopyinit(c=c, ws=ws, filename=filename, comment=False, unit=False, load=nampath, verbose=False)
+flopyinit(c=c, ws=ws, filename=filename, comment=False, unit=False, load=nampath, verbose=False)
