@@ -13,12 +13,14 @@ To update:
 
 ## Scriptgenerator usage
     from scriptgenerator.scriptgenerator import flopyinit
-
-
     c=['ml', 'dis', 'bas6', 'lpf', 'wel', 'riv', 'oc', 'pcg', 'mt', 'btn',  'adv', 'dsp', 'ssm', 'rct', 'gcg', 'sw', 'vdf', 'vsc']
     ws = 'C:\Users\Bas\Google Drive\CiTG MSc\CIE5060 - Thesis\scripts\\'
     filename = 'test.py'
     nampath = 'C:\\Users\\Bas\\Google Drive\\CiTG MSc\\Artesia\\mflab\\run\\swt_v4.NAM'
-
-
     flopyinit(c=c, ws=ws, filename=filename, comment=False, unit=False, load=nampath, verbose=False)
+
+## Delnam usage
+Some clean up scripts to clean up old files and close hanging mf/sw processes
+    from delnam.delnam import *
+    running()
+    delnam(os.path.join(ws,'pwn2.sw_nam'))
