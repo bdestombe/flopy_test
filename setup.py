@@ -18,7 +18,7 @@ config = {
     'author_email': 'bdestombe@gmail.com',
     'version': '0.1',
     'install_requires': ['numpy'],
-    'packages': ['scriptgenerator', 'delnam'],
+    'packages': ['scriptgenerator', 'delnam', 'readstresslrc'],
     'scripts': [],
     'name': 'flopy_test_scripts'
 }
