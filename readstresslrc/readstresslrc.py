@@ -26,17 +26,17 @@ class readstresslrc(object):
         if np.sum(reclen) != (len(pack.stress_period_data.data[0]) * nper):
             print "Not every bcn is defined for each stress period"
 
-        arr = np.recarray(np.sum(reclen),
-                          pack.stress_period_data.data[0].dtype)
-        self.arr = np.lib.recfunctions.append_fields(arr, 'it',
-                                                     np.ones(5110, dtype=np.int),
-                                                     usemask=False, asrecarray=True)
+        self.arr = np.recarray(np.sum(reclen),
+                               pack.stress_period_data.data[0].dtype)
+        self.arr = np.lib.recfunctions.append_fields(self.arr, 'it',
+                                                 np.ones(5110, dtype=np.int),
+                                                 usemask=False, asrecarray=True)
 
         for i in xrange(nper):
-            arr[ifrom[i]:ito[i]] = pack.stress_period_data.data[i]
-            arr[ifrom[i]:ito[i]]['it'] = i
+            self.arr[ifrom[i]:ito[i]] = pack.stress_period_data.data[i]
+            self.arr[ifrom[i]:ito[i]]['it'] = i
 
-        a = np.vstack((arr.k, arr.i, arr.j)).T
+        a = np.vstack((self.arr.k, self.arr.i, self.arr.j)).T
         ind = np.lexsort(a.T)
         kij = a[ind[np.concatenate(([True], np.any(a[ind[1:]] != a[ind[:-1]],
                                     axis=1)))]]
