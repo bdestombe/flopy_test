@@ -32,4 +32,6 @@ Some clean up scripts to clean up old files and close hanging mf/sw processes:
 ## Timetools
 Time tools to convert timestamps from Matlab to Python and visa versa.
 
-    
+    from timetools.timetools import mat2py, py2mat
+    pytime = timetools(mattime)
+    mattime = timetools(pytime)
