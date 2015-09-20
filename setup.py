@@ -17,8 +17,8 @@ config = {
     'download_url': 'Where to download it.',
     'author_email': 'bdestombe@gmail.com',
     'version': '0.1',
-    'install_requires': ['numpy'],
-    'packages': ['scriptgenerator', 'delnam', 'readstresslrc'],
+    'install_requires': ['numpy', 'datetime'],
+    'packages': ['scriptgenerator', 'delnam', 'readstresslrc', 'timetools'],
     'scripts': [],
     'name': 'flopy_test_scripts'
 }
